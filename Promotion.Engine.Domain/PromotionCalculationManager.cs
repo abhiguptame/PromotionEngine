@@ -19,5 +19,6 @@ namespace Promotion.Engine.Domain
             return await Task.FromResult(new float());
         }
 
+   
     }
 }
