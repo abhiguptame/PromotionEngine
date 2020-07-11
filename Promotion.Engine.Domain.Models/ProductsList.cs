@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Promotion.Engine.App.Models
+namespace Promotion.Engine.Domain.Models
 {
     public class ProductsList
     {

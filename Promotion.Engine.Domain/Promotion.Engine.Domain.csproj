@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Promotion.Engine.Domain.Contract\Promotion.Engine.Domain.Contract.csproj" />
+  </ItemGroup>
+
 </Project>

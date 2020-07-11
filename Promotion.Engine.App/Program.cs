@@ -16,7 +16,8 @@ namespace Promotion.Engine.App
             .AddSingleton<IPromotionCalculationManager, PromotionCalculationManager>()            
             .BuildServiceProvider();
 
-            var promotionCalculationManager = serviceProvider.GetService<IPromotionCalculationManager>();       
+            var promotionCalculationManager = serviceProvider.GetService<IPromotionCalculationManager>();
+            promotionCalculationManager.ApplyPromotion();
         }
     }
 }
