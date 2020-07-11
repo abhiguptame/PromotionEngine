@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Promotion.Engine.App.Models;
 using Promotion.Engine.Domain;
 using Promotion.Engine.Domain.Contract;
 using System;
+using System.Collections.Generic;
 
 namespace Promotion.Engine.App
 {
@@ -12,12 +14,33 @@ namespace Promotion.Engine.App
             Console.WriteLine("######################## Sample Promotion Engine Implementation ####################################");
 
             // Setting up Dependency Injection 
-            var serviceProvider = new ServiceCollection()            
-            .AddSingleton<IPromotionCalculationManager, PromotionCalculationManager>()            
+            var serviceProvider = new ServiceCollection()
+            .AddSingleton<IPromotionCalculationManager, PromotionCalculationManager>()
             .BuildServiceProvider();
 
             var promotionCalculationManager = serviceProvider.GetService<IPromotionCalculationManager>();
-            promotionCalculationManager.ApplyPromotion();
+
+            SalesProductsLineItems salesProductsLineItems = new SalesProductsLineItems();           
+            salesProductsLineItems.SalesProductDetails.Add("A", 1);
+            salesProductsLineItems.SalesProductDetails.Add("B", 1);
+            salesProductsLineItems.SalesProductDetails.Add("C", 1);
+            //salesProductsLineItems.SalesProductDetails.Add("D", 1);
+
+            Console.WriteLine("Product List:");
+            foreach(var product in salesProductsLineItems.SalesProductDetails)
+            {
+                Console.WriteLine("Product Name: {0} => Product Count: {1}", product.Key, product.Value);
+            }
+
+            try
+            {
+               promotionCalculationManager.ApplyPromotion(salesProductsLineItems);              
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception During Applying Promotion. Exception: " + ex.ToString());               
+            }
+            
         }
     }
 }

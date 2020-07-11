@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Promotion.Engine.Domain.Contract\Promotion.Engine.Domain.Contract.csproj" />
+    <ProjectReference Include="..\Promotion.Engine.Domain.Models\Promotion.Engine.Domain.Models.csproj" />
   </ItemGroup>
 
 </Project>
