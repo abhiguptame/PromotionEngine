@@ -21,10 +21,10 @@ namespace Promotion.Engine.App
             var promotionCalculationManager = serviceProvider.GetService<IPromotionCalculationManager>();
 
             SalesProductsLineItems salesProductsLineItems = new SalesProductsLineItems();           
-            salesProductsLineItems.SalesProductDetails.Add("A", 5);
+            salesProductsLineItems.SalesProductDetails.Add("A", 3);
             salesProductsLineItems.SalesProductDetails.Add("B", 5);
-            salesProductsLineItems.SalesProductDetails.Add("C", 1);
-            //salesProductsLineItems.SalesProductDetails.Add("D", 1);
+            salesProductsLineItems.SalesProductDetails.Add("C", 2);
+            salesProductsLineItems.SalesProductDetails.Add("D", 2);
 
             Console.WriteLine("Product List:");
             foreach(var product in salesProductsLineItems.SalesProductDetails)
