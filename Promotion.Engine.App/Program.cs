@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Promotion.Engine.Domain;
+using Promotion.Engine.Domain.Contract;
+using System;
 
 namespace Promotion.Engine.App
 {
@@ -7,6 +10,13 @@ namespace Promotion.Engine.App
         static void Main(string[] args)
         {
             Console.WriteLine("######################## Sample Promotion Engine Implementation ####################################");
+
+            // Setting up Dependency Injection 
+            var serviceProvider = new ServiceCollection()            
+            .AddSingleton<IPromotionCalculationManager, PromotionCalculationManager>()            
+            .BuildServiceProvider();
+
+            var promotionCalculationManager = serviceProvider.GetService<IPromotionCalculationManager>();       
         }
     }
 }

@@ -5,4 +5,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Promotion.Engine.App.Models\Promotion.Engine.App.Models.csproj" />
+    <ProjectReference Include="..\Promotion.Engine.Common.Contract\Promotion.Engine.Common.Contract.csproj" />
+    <ProjectReference Include="..\Promotion.Engine.Common\Promotion.Engine.Common.csproj" />
+    <ProjectReference Include="..\Promotion.Engine.Domain.Contract\Promotion.Engine.Domain.Contract.csproj" />
+    <ProjectReference Include="..\Promotion.Engine.Domain.Models\Promotion.Engine.Domain.Models.csproj" />
+    <ProjectReference Include="..\Promotion.Engine.Domain\Promotion.Engine.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
