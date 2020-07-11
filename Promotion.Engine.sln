@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promotion.Engine.UnitTests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promotion.Engine.Common", "Promotion.Engine.Common\Promotion.Engine.Common.csproj", "{B03E1927-0D87-454D-A644-5B37BBEF22E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promotion.Engine.Domain.Contract", "Promotion.Engine.Domain.Contract\Promotion.Engine.Domain.Contract.csproj", "{20053575-CAF8-4B2C-AEBE-05FFF9C2B531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promotion.Engine.Common.Contract", "Promotion.Engine.Common.Contract\Promotion.Engine.Common.Contract.csproj", "{358D4418-3EBC-429C-89A5-878C2C42CBBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{B03E1927-0D87-454D-A644-5B37BBEF22E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B03E1927-0D87-454D-A644-5B37BBEF22E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B03E1927-0D87-454D-A644-5B37BBEF22E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20053575-CAF8-4B2C-AEBE-05FFF9C2B531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20053575-CAF8-4B2C-AEBE-05FFF9C2B531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20053575-CAF8-4B2C-AEBE-05FFF9C2B531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20053575-CAF8-4B2C-AEBE-05FFF9C2B531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{358D4418-3EBC-429C-89A5-878C2C42CBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358D4418-3EBC-429C-89A5-878C2C42CBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358D4418-3EBC-429C-89A5-878C2C42CBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358D4418-3EBC-429C-89A5-878C2C42CBBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

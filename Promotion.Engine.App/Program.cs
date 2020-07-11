@@ -6,7 +6,7 @@ namespace Promotion.Engine.App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("######################## Sample Promotion Engine Implementation ####################################");
         }
     }
 }
