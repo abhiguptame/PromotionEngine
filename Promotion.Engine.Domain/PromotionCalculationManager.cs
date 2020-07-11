@@ -69,7 +69,7 @@ namespace Promotion.Engine.Domain
                     int productCount = salesProductDetails[productName];
                     int givenProductOfferCount = promotionCoupon.ProductCoupon[productName];
                     int productOfferCount = productCount / givenProductOfferCount;
-                    int remainingProductCount = productCount % productOfferCount;
+                    int remainingProductCount = productCount % givenProductOfferCount;
                     salesProductDetails[productName] = remainingProductCount;
                     promotionCouponDiscountPrice = productOfferCount * promotionCoupon.DiscountPrice;
                 }
