@@ -39,8 +39,7 @@ namespace Promotion.Engine.Domain
 
             float totalPrice = GetTotalPrice(salesProductsLineItems.SalesProductDetails);
 
-            var promotionalPrice = promotionsDiscountOffers + totalPrice;
-            Console.WriteLine("Total Price (With Promotion Applied): " + promotionalPrice); 
+            var promotionalPrice = promotionsDiscountOffers + totalPrice;           
 
             return await Task.FromResult(promotionalPrice);
         }

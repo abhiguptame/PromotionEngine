@@ -34,7 +34,9 @@ namespace Promotion.Engine.App
 
             try
             {
-               promotionCalculationManager.ApplyPromotion(salesProductsLineItems);              
+               var promotionalPrice = promotionCalculationManager.ApplyPromotion(salesProductsLineItems).Result;
+               Console.WriteLine("Total Price (With Promotion Applied): " + promotionalPrice);
+               Console.ReadLine();
             }
             catch (Exception ex)
             {
