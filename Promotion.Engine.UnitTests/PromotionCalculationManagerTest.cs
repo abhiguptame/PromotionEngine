@@ -73,6 +73,24 @@ namespace Promotion.Engine.UnitTests
             promotionalPrice.Should().Be(280);
         }
 
+        [Fact]
+        public void Senario_Custom_Unit_Test()
+        {
+            // Arrange 
+            SalesProductsLineItems salesProductsLineItems = new SalesProductsLineItems();
+            salesProductsLineItems.SalesProductDetails.Add("A", 3);
+            salesProductsLineItems.SalesProductDetails.Add("B", 5);
+            salesProductsLineItems.SalesProductDetails.Add("C", 2);
+            salesProductsLineItems.SalesProductDetails.Add("D", 2);
+
+            var promotionCalculationManager = new PromotionCalculationManager();
+
+            // Act
+            var promotionalPrice = promotionCalculationManager.ApplyPromotion(salesProductsLineItems).Result;
+
+            // Assert
+            promotionalPrice.Should().Be(310);
+        }
         #endregion
     }
 }
