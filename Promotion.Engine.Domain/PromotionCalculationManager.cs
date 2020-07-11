@@ -11,10 +11,15 @@ namespace Promotion.Engine.Domain
 {
     public class PromotionCalculationManager : IPromotionCalculationManager
     {
+        #region Constructors
 
         public PromotionCalculationManager()
         {
         }
+
+        #endregion
+
+        #region Public Methods
 
         public async Task<float> ApplyPromotion(SalesProductsLineItems salesProductsLineItems)
         {
@@ -40,6 +45,9 @@ namespace Promotion.Engine.Domain
             return await Task.FromResult(promotionalPrice);
         }
 
+        #endregion
+
+        #region Private Methods
 
         private float GetTotalPrice(Dictionary<string, int> productDetailsList)
         {
@@ -111,6 +119,8 @@ namespace Promotion.Engine.Domain
 
             return promotionCouponDiscountPrice;
         }
+
+        #endregion
 
     }
 }
